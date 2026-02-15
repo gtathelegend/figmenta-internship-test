@@ -1,4 +1,5 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const API_URL =
+  import.meta.env.VITE_API_URL || "https://figmenta-internship-test.vercel.app";
 
 const request = async (path, options = {}) => {
   const response = await fetch(`${API_URL}${path}`, {
