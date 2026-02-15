@@ -1,0 +1,201 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1d1f23;
+  background-color: #f5f6f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+}
+
+a {
+  color: #1a5fd0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.app-header {
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.app-header p {
+  margin: 0;
+  color: #4a4f57;
+}
+
+.app-main {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(28, 35, 45, 0.08);
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.form-grid label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-grid input,
+.form-grid textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d6dbe1;
+  font-size: 14px;
+}
+
+.form-grid textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #1a5fd0;
+  color: #ffffff;
+}
+
+button.secondary {
+  background: #eef2f6;
+  color: #2d3340;
+}
+
+button.danger {
+  background: #e55353;
+  color: #ffffff;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #eef2ff;
+  color: #2b3c7a;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+.tag.active {
+  background: #1a5fd0;
+  color: #ffffff;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bookmark-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.bookmark-item h3 {
+  margin: 0 0 4px;
+}
+
+.bookmark-meta {
+  color: #4a4f57;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.inline-form {
+  display: grid;
+  gap: 10px;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.notice {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff5f5;
+  color: #a52828;
+  font-size: 14px;
+}
+
+.loading {
+  font-weight: 600;
+  color: #2d3340;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 24px 16px 40px;
+  }
+
+  .app-header h1 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "seed-1",
+    "url": "https://developer.mozilla.org/",
+    "title": "MDN Web Docs",
+    "description": "Reference and tutorials for web developers.",
+    "tags": ["docs", "web", "javascript"],
+    "createdAt": "2026-02-01T10:00:00.000Z"
+  },
+  {
+    "id": "seed-2",
+    "url": "https://react.dev/",
+    "title": "React",
+    "description": "Official React documentation and guides.",
+    "tags": ["react", "frontend"],
+    "createdAt": "2026-02-02T10:00:00.000Z"
+  },
+  {
+    "id": "seed-3",
+    "url": "https://expressjs.com/",
+    "title": "Express",
+    "description": "Fast, unopinionated, minimalist web framework for Node.js.",
+    "tags": ["node", "backend", "express"],
+    "createdAt": "2026-02-03T10:00:00.000Z"
+  },
+  {
+    "id": "seed-4",
+    "url": "https://vitejs.dev/",
+    "title": "Vite",
+    "description": "Next generation frontend tooling.",
+    "tags": ["tooling", "frontend"],
+    "createdAt": "2026-02-04T10:00:00.000Z"
+  },
+  {
+    "id": "seed-5",
+    "url": "https://developer.chrome.com/docs/",
+    "title": "Chrome Developers",
+    "description": "Guides and tools for building on the web.",
+    "tags": ["docs", "web"],
+    "createdAt": "2026-02-05T10:00:00.000Z"
+  }
+]
