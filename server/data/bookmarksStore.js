@@ -2,7 +2,9 @@ const fs = require("fs/promises");
 const path = require("path");
 const { randomUUID } = require("crypto");
 
-const dataFile = path.join(__dirname, "bookmarks.json");
+const dataFile = process.env.VERCEL
+  ? path.join("/tmp", "bookmarks.json")
+  : path.join(__dirname, "bookmarks.json");
 let bookmarks = [];
 
 const seedBookmarks = [

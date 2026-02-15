@@ -1,5 +1,9 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "client/dist",
-  "installCommand": "cd server && npm i && cd .. && cd client && npm i && cd .."
+  "installCommand": "cd server && npm i && cd .. && cd client && npm i && cd ..",
+  "rewrites": [
+    { "source": "/bookmarks", "destination": "/api/bookmarks" },
+    { "source": "/bookmarks/:path*", "destination": "/api/bookmarks/:path*" }
+  ]
 }
