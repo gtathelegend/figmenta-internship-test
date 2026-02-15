@@ -28,7 +28,7 @@ const BookmarkItem = ({ bookmark, onUpdate, onDelete, onTagClick }) => {
             {bookmark.url}
           </a>
         </div>
-        <p>{snippet}</p>
+        <p className="bookmark-description">{snippet}</p>
         <div className="tag-list">
           {(bookmark.tags || []).length === 0 ? (
             <span className="bookmark-meta">No tags</span>
@@ -45,7 +45,7 @@ const BookmarkItem = ({ bookmark, onUpdate, onDelete, onTagClick }) => {
             ))
           )}
         </div>
-        <div className="button-row">
+        <div className="button-row bookmark-actions">
           <button className="secondary" onClick={() => setIsEditing(true)}>
             Edit
           </button>

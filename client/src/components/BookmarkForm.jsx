@@ -73,6 +73,9 @@ const BookmarkForm = ({ onCreate }) => {
   return (
     <form className="card" onSubmit={handleSubmit}>
       <h2 className="section-title">Add Bookmark</h2>
+      <p className="helper-text">
+        Keep tags lowercase and limit to five per bookmark.
+      </p>
       {error ? <div className="notice">{error}</div> : null}
       <div className="form-grid">
         <div>

@@ -82,21 +82,37 @@ const Home = () => {
   };
 
   return (
-    <div className="app-main">
-      <BookmarkForm onCreate={handleCreate} />
-      <SearchBar value={searchTerm} onChange={setSearchTerm} />
-      <TagFilter activeTag={activeTag} onClear={() => setActiveTag("")} />
-      {error ? <ErrorBanner message={error} /> : null}
-      {isLoading ? (
-        <Loading message="Loading bookmarks..." />
-      ) : (
-        <BookmarkList
-          bookmarks={filteredBookmarks}
-          onUpdate={handleUpdate}
-          onDelete={handleDelete}
-          onTagClick={(tag) => setActiveTag(tag)}
-        />
-      )}
+    <div className="page">
+      <header className="page-header">
+        <div className="page-title">
+          <p className="eyebrow">Personal Library</p>
+          <h1>Bookmark Manager</h1>
+          <p className="subtitle">
+            Save, tag, and revisit the links that matter most.
+          </p>
+        </div>
+        <SearchBar value={searchTerm} onChange={setSearchTerm} />
+      </header>
+
+      <div className="content-grid">
+        <aside className="sidebar">
+          <BookmarkForm onCreate={handleCreate} />
+          <TagFilter activeTag={activeTag} onClear={() => setActiveTag("")} />
+        </aside>
+        <section className="main-content">
+          {error ? <ErrorBanner message={error} /> : null}
+          {isLoading ? (
+            <Loading message="Loading bookmarks..." />
+          ) : (
+            <BookmarkList
+              bookmarks={filteredBookmarks}
+              onUpdate={handleUpdate}
+              onDelete={handleDelete}
+              onTagClick={(tag) => setActiveTag(tag)}
+            />
+          )}
+        </section>
+      </div>
     </div>
   );
 };

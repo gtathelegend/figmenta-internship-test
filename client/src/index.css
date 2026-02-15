@@ -1,8 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
 :root {
   color-scheme: light;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1d1f23;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  color: #111827;
   background-color: #f5f6f8;
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-muted: #f1f3f6;
+  --text: #111827;
+  --muted: #5f6b7a;
+  --primary: #1d4ed8;
+  --primary-strong: #1e40af;
+  --danger: #dc2626;
+  --danger-strong: #b91c1c;
+  --border: #e2e6ec;
+  --shadow: 0 16px 30px rgba(16, 24, 40, 0.08);
+  --radius: 12px;
 }
 
 * {
@@ -12,11 +26,11 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+  background: radial-gradient(circle at top, #ffffff 0%, #f3f4f7 42%, #eef1f5 100%);
 }
 
 a {
-  color: #1a5fd0;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -25,40 +39,96 @@ a:hover {
 }
 
 .app {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 20px 60px;
+  padding: 36px 24px 72px;
 }
 
-.app-header {
-  margin-bottom: 24px;
+.page {
+  display: grid;
+  gap: 28px;
 }
 
-.app-header h1 {
+.page-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  gap: 24px;
+  align-items: end;
+}
+
+.page-title h1 {
+  margin: 0 0 6px;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
   margin: 0 0 8px;
-  font-size: 32px;
 }
 
-.app-header p {
+.subtitle {
   margin: 0;
-  color: #4a4f57;
+  color: var(--muted);
+  font-size: 15px;
 }
 
-.app-main {
+.search-bar {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+.search-input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  background: #fbfcfe;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.sidebar,
+.main-content {
   display: grid;
   gap: 20px;
 }
 
 .card {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(28, 35, 45, 0.08);
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 20px;
+  border: 1px solid rgba(226, 230, 236, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 32px rgba(16, 24, 40, 0.12);
 }
 
 .section-title {
   font-size: 18px;
   margin: 0 0 12px;
+}
+
+.helper-text {
+  margin: -4px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .form-grid {
@@ -76,9 +146,19 @@ a:hover {
 .form-grid textarea {
   width: 100%;
   padding: 10px 12px;
-  border-radius: 8px;
-  border: 1px solid #d6dbe1;
+  border-radius: 10px;
+  border: 1px solid var(--border);
   font-size: 14px;
+  background: #fbfcfe;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus,
+.search-input:focus {
+  outline: none;
+  border-color: rgba(29, 78, 216, 0.6);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
 }
 
 .form-grid textarea {
@@ -95,25 +175,40 @@ a:hover {
 
 button {
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 10px 16px;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background 0.2s ease;
 }
 
 button.primary {
-  background: #1a5fd0;
+  background: var(--primary);
   color: #ffffff;
+  box-shadow: 0 8px 18px rgba(29, 78, 216, 0.2);
+}
+
+button.primary:hover {
+  background: var(--primary-strong);
 }
 
 button.secondary {
-  background: #eef2f6;
-  color: #2d3340;
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+button.secondary:hover {
+  background: #e5e9f0;
 }
 
 button.danger {
-  background: #e55353;
+  background: var(--danger);
   color: #ffffff;
+}
+
+button.danger:hover {
+  background: var(--danger-strong);
 }
 
 button:disabled {
@@ -125,17 +220,22 @@ button:disabled {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: #eef2ff;
-  color: #2b3c7a;
+  background: #e6eefc;
+  color: #1e3a8a;
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 12px;
   cursor: pointer;
   border: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+  background: #d9e6fb;
 }
 
 .tag.active {
-  background: #1a5fd0;
+  background: var(--primary);
   color: #ffffff;
 }
 
@@ -155,9 +255,19 @@ button:disabled {
 }
 
 .bookmark-meta {
-  color: #4a4f57;
+  color: var(--muted);
   font-size: 13px;
   margin-bottom: 10px;
+}
+
+.bookmark-description {
+  color: #2f3645;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .inline-form {
@@ -172,22 +282,45 @@ button:disabled {
   align-items: center;
 }
 
-.filter-input {
-  flex: 1;
-  min-width: 220px;
+.filter-card .bookmark-meta {
+  margin: 0;
 }
 
 .notice {
   padding: 10px 12px;
-  border-radius: 8px;
-  background: #fff5f5;
-  color: #a52828;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #9f1239;
   font-size: 14px;
 }
 
 .loading {
   font-weight: 600;
-  color: #2d3340;
+  color: var(--text);
+}
+
+.empty-state h3 {
+  margin: 0 0 6px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.bookmark-actions {
+  justify-content: flex-end;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .modal-backdrop {
@@ -202,11 +335,11 @@ button:disabled {
 }
 
 .modal {
-  background: #ffffff;
-  border-radius: 14px;
+  background: var(--surface);
+  border-radius: 16px;
   padding: 20px;
   width: min(720px, 100%);
-  box-shadow: 0 18px 40px rgba(20, 24, 31, 0.2);
+  box-shadow: 0 20px 50px rgba(20, 24, 31, 0.25);
 }
 
 .modal-header {
@@ -226,7 +359,15 @@ button:disabled {
     padding: 24px 16px 40px;
   }
 
-  .app-header h1 {
-    font-size: 26px;
+  .page-header {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title h1 {
+    font-size: 28px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
   }
 }

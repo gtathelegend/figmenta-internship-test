@@ -1,8 +1,12 @@
 const SearchBar = ({ value, onChange }) => {
   return (
-    <div className="card">
+    <div className="search-bar">
+      <label className="sr-only" htmlFor="search">
+        Search bookmarks
+      </label>
       <input
-        className="filter-input"
+        id="search"
+        className="search-input"
         type="text"
         placeholder="Search by title or URL..."
         value={value}
