@@ -2,6 +2,16 @@
 
 Full-stack Bookmark Manager with a Node/Express REST API and a React client.
 
+## Project Overview
+
+A bookmark manager that supports tagging, search, inline CRUD operations, and a clean single-page UI.
+
+## Tech Stack
+
+- Backend: Node.js, Express.js, express-validator
+- Frontend: React (Vite), Fetch API, plain CSS
+- Storage: JSON file
+
 ## Setup
 
 1. Install dependencies
@@ -89,4 +99,12 @@ Responses:
 - `PUT` expects full bookmark payload (url, title, description, tags).
 - Tags are stored in lowercase and trimmed.
 - Search is client-side and case-insensitive.
+
+## Time Spent
+
+- 3 hours (estimate)
+
+## AI Tools Used
+
+- GitHub Copilot
 

@@ -4,7 +4,11 @@
     "url": "https://developer.mozilla.org/",
     "title": "MDN Web Docs",
     "description": "Reference and tutorials for web developers.",
-    "tags": ["docs", "web", "javascript"],
+    "tags": [
+      "docs",
+      "web",
+      "javascript"
+    ],
     "createdAt": "2026-02-01T10:00:00.000Z"
   },
   {
@@ -12,7 +16,10 @@
     "url": "https://react.dev/",
     "title": "React",
     "description": "Official React documentation and guides.",
-    "tags": ["react", "frontend"],
+    "tags": [
+      "react",
+      "frontend"
+    ],
     "createdAt": "2026-02-02T10:00:00.000Z"
   },
   {
@@ -20,7 +27,11 @@
     "url": "https://expressjs.com/",
     "title": "Express",
     "description": "Fast, unopinionated, minimalist web framework for Node.js.",
-    "tags": ["node", "backend", "express"],
+    "tags": [
+      "node",
+      "backend",
+      "express"
+    ],
     "createdAt": "2026-02-03T10:00:00.000Z"
   },
   {
@@ -28,7 +39,10 @@
     "url": "https://vitejs.dev/",
     "title": "Vite",
     "description": "Next generation frontend tooling.",
-    "tags": ["tooling", "frontend"],
+    "tags": [
+      "tooling",
+      "frontend"
+    ],
     "createdAt": "2026-02-04T10:00:00.000Z"
   },
   {
@@ -36,7 +50,31 @@
     "url": "https://developer.chrome.com/docs/",
     "title": "Chrome Developers",
     "description": "Guides and tools for building on the web.",
-    "tags": ["docs", "web"],
+    "tags": [
+      "docs",
+      "web"
+    ],
     "createdAt": "2026-02-05T10:00:00.000Z"
+  },
+  {
+    "id": "941f6ac6-ed69-444d-af52-977feb2bad7c",
+    "url": "https://www.linkedin.com/in/vedaangsharma2006/",
+    "title": "Vedaang Sharma Linkedin",
+    "description": "Skills & Interests:\n💻 Programming Enthusiast | 🎨 Creative Problem-Solver | 📚 Lifelong Learner\nI'm currently learning Python, Java, DSA, Web Development and Database Management and exploring Mobile App Development and Full Stack Web Development.",
+    "tags": [
+      "full-stack",
+      "code",
+      "student",
+      "vgu"
+    ],
+    "createdAt": "2026-02-15T07:45:14.282Z"
+  },
+  {
+    "id": "21b4a522-1fb2-47c8-b019-320a14219d5d",
+    "url": "https://github.com/gtathelegend",
+    "title": "Github Vedaang Sharma",
+    "description": "",
+    "tags": [],
+    "createdAt": "2026-02-15T07:52:41.987Z"
   }
 ]

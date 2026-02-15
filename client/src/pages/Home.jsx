@@ -7,7 +7,8 @@ import {
 } from "../services/api.js";
 import BookmarkForm from "../components/BookmarkForm.jsx";
 import BookmarkList from "../components/BookmarkList.jsx";
-import FilterBar from "../components/FilterBar.jsx";
+import SearchBar from "../components/SearchBar.jsx";
+import TagFilter from "../components/TagFilter.jsx";
 import Loading from "../components/Loading.jsx";
 import ErrorBanner from "../components/ErrorBanner.jsx";
 
@@ -83,12 +84,8 @@ const Home = () => {
   return (
     <div className="app-main">
       <BookmarkForm onCreate={handleCreate} />
-      <FilterBar
-        searchTerm={searchTerm}
-        onSearchChange={setSearchTerm}
-        activeTag={activeTag}
-        onClearTag={() => setActiveTag("")}
-      />
+      <SearchBar value={searchTerm} onChange={setSearchTerm} />
+      <TagFilter activeTag={activeTag} onClear={() => setActiveTag("")} />
       {error ? <ErrorBanner message={error} /> : null}
       {isLoading ? (
         <Loading message="Loading bookmarks..." />

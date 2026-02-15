@@ -5,11 +5,11 @@ const {
   createBookmark,
   updateBookmark,
   deleteBookmark,
-} = require("../controllers/bookmarksController");
+} = require("../controllers/bookmarkController");
 const {
   validateBookmark,
   validateBookmarkUpdate,
-} = require("../middleware/validateBookmark");
+} = require("../middleware/validation");
 
 const router = express.Router();
 
