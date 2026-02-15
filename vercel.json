@@ -3,7 +3,9 @@
   "outputDirectory": "client/dist",
   "installCommand": "cd server && npm i && cd .. && cd client && npm i && cd ..",
   "rewrites": [
+    { "source": "/api/bookmarks", "destination": "/api/bookmarks" },
+    { "source": "/api/bookmarks/:path*", "destination": "/api/bookmarks" },
     { "source": "/bookmarks", "destination": "/api/bookmarks" },
-    { "source": "/bookmarks/:path*", "destination": "/api/bookmarks/:path*" }
+    { "source": "/bookmarks/:path*", "destination": "/api/bookmarks" }
   ]
 }
