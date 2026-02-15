@@ -126,11 +126,11 @@ module.exports = async (req, res) => {
   await ensureInit();
   const url = new URL(req.url, `http://${req.headers.host}`);
   const pathParts = url.pathname.split("/").filter(Boolean);
-  const id = pathParts.length > 2 ? pathParts[2] : null;
+  const id = req.query?.id || (pathParts.length > 2 ? pathParts[2] : null);
 
   try {
     if (req.method === "GET") {
-      const tag = url.searchParams.get("tag");
+      const tag = req.query?.tag || url.searchParams.get("tag");
       const bookmarks = listBookmarks(tag ? tag.toLowerCase() : null);
       return sendJson(res, 200, bookmarks);
     }
